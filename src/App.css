@@ -96,7 +96,7 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.75rem 2rem;
+  padding: 0.5rem 2rem;
   background: var(--offWhite);
   z-index: 1;
 }
@@ -127,7 +127,8 @@ h6 {
   color: var(--mainBlack);
   transition: var(--mainTransition);
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
   font-weight: 600;
   letter-spacing: var(--mainSpacing);
 }
@@ -136,7 +137,7 @@ h6 {
 }
 
 .show-nav {
-  height: 100px;
+  height: 150px;
 }
 @media screen and (min-width: 768px) {
   .nav-btn {
@@ -150,7 +151,8 @@ h6 {
   .nav-links {
     height: auto;
     display: flex;
-    margin-left: 4rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
   }
   .nav-links a {
     margin: 0 1rem;

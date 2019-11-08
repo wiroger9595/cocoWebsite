@@ -21,26 +21,26 @@ export default [
       id: "1"
     },
     fields: {
-      name: "single economy",
-      slug: "single-economy",
-      type: "single",
-      price: 100,
+      name: "coconut juice with pulp",
+      slug: "drink",
+      type: "drink",
+      price: "ask for detail",
       size: 200,
       capacity: 1,
       pets: false,
       breakfast: false,
       featured: false,
       description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
-      ],
+       // "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
+        "Thailand and abundant of NAM HOM COCONUT (nice flavour).",
+       extras: [
+        "Place of Origin: Thailand",
+        "Purity: 100%",
+        "Brix: 9",
+        "Shelf Life: 2 Years",
+        "Packing: Tin Can. Packing size: 320 ml/330 ml/350 ml/ 500 ml/ 520 ml/ 560 ml",
+        "Packing: Alu Can. Packing size: AL330(net 310 ml) / AL350(net 330 ml) / AL500(net 480 ml)"
+        ],
       images: [
         {
           fields: {
@@ -78,25 +78,25 @@ export default [
       id: "2"
     },
     fields: {
-      name: "single basic",
-      slug: "single-basic",
-      type: "single",
-      price: 150,
-      size: 250,
+      name: "ALOE VERA SERIES",
+      slug: "drink",
+      type: "drink",
+      price: "ask for detail",
+      size: "no ",
       capacity: 1,
       pets: false,
       breakfast: false,
       featured: false,
       description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
+        "We us aloe vera (aloe Barbadensis), the best kind of aloe to product all the products. And our products are free from ALOIN.",
       extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
+        "Place of Origin: Thailand",
+        "Brand: Miramar",
+        "Can Size:",
+        "190ml (Drain Weight: 100g)",
+        "560ml (Drain Weight: 320g)",
+        "Granule Size:",
+        "10mm or 15mm."
       ],
       images: [
         {
@@ -368,7 +368,7 @@ export default [
       slug: "double-standard",
       type: "double",
       price: 300,
-      size: 400,
+      size: "400",
       capacity: 2,
       pets: true,
       breakfast: false,
@@ -424,7 +424,7 @@ export default [
       name: "double deluxe",
       slug: "double-deluxe",
       type: "double",
-      price: 400,
+      price: "ask for detail",
       size: 500,
       capacity: 2,
       pets: true,
