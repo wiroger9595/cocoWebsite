@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import defaultImg from '../images/products-1.jpeg';
-
+import PropTypes from  'prop-types';
 
 export default function ProductItem({product}) {
     const{name,slug,images,price} = product;
@@ -16,10 +16,21 @@ export default function ProductItem({product}) {
 
              <Link to ={ `/products/${slug}`} 
            className = "btn-primary product-link">
-                 Features
+                 Product 
+                 Detail
             </Link > 
         </div>
+        <p className ="product-info">{name}</p>
      </article>
     );
 }
 
+ProductItem.propTypes = { 
+    product:PropTypes.shape({
+        name:PropTypes.string.isRequired,
+        slug:PropTypes.string.isRequired,
+        images:PropTypes.arrayOf(PropTypes.string).isRequired,
+        price:PropTypes.string.isRequired,
+
+    })
+}

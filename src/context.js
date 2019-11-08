@@ -27,6 +27,8 @@ const ProductContext = React.createContext();
        });
     }
 
+////////////////////////////////////////////////////////////////////////////////////
+  
     formatData(items){
         let tempItems = items.map(item => {
 
@@ -40,9 +42,21 @@ const ProductContext = React.createContext();
         return tempItems;
     }
 
+////////////////////////////////////////////////////////////////////////////////////
+
+    getProduct = (slug) =>{
+        let tempProducts = [...this.state.products];
+        const product = tempProducts.find((product) => product.slug === slug);
+        return product;
+    }
+
+
     render(){
     return (
-        <ProductContext.Provider value={{...this.state}}>
+        <ProductContext.Provider 
+            value={{...this.state,
+                    getProduct: this.getProduct
+            }}>
             {this.props.children}
         </ProductContext.Provider>
             
