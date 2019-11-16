@@ -123,7 +123,7 @@ h6 {
 .nav-links a {
   display: block;
   text-decoration: none;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   color: var(--mainBlack);
   transition: var(--mainTransition);
   text-align: center;
@@ -137,7 +137,7 @@ h6 {
 }
 
 .show-nav {
-  height: 150px;
+  height: 180px;
 }
 @media screen and (min-width: 768px) {
   .nav-btn {

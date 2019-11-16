@@ -21,7 +21,8 @@ export default function ProudctFilter({products}) {
         maxCalories, 
         minSize, 
         maxSize, 
-        extraSugar
+        extraSugar,
+        health_cerificate
     } = context;
 
     //get unique types
@@ -105,15 +106,71 @@ export default function ProudctFilter({products}) {
             {/*select calories */ }
             <div className="form-group">
                 <label htmlFor="calories">
-                    Product's calories ${calories}
+                    Calories ${calories}
                 </label>
-                <input type="range" name ="calories" min={minCalories} max={maxCalories} id="calories" value={calories} onChange={handleChange} className="form-control" />
+                <input 
+                    type="range" 
+                    name ="calories" 
+                    min={minCalories} 
+                    max={maxCalories} 
+                    id="calories" 
+                    value={calories} 
+                    onChange={handleChange} className="form-control" />
                 
             </div>
 
             {/*select calories */ }
 
+ {/*-------------------------------------------------  */}
 
+            {/*select size */ }
+            <div className="form-group">
+                <label htmlFor="calories">
+                    Product's size 
+                </label>
+                <div className="size-inputs">
+                    <input 
+                        type="number" 
+                        name="minSize" 
+                        id="size" 
+                        value={minSize} 
+                        onChange={handleChange} className="size-input" />
+                
+                    <input 
+                        type="number" 
+                        name="maxSize" 
+                        id="size" 
+                        value={maxSize} 
+                        onChange={handleChange} className="size-input" />
+                </div>
+                
+            </div>
+
+            {/*select size */ }
+
+ {/*-------------------------------------------------  */}
+
+            {/*   extra  sugar */ }
+            <div className = "form-group">
+                <div className="single-extra">
+                    <input type="checkbox" name="extraSugar" id="extraSugar" checked={extraSugar} onChange={handleChange}/>
+
+                    <label htmlFor="extraSugar">Non Sugar</label>
+                </div>
+            
+            
+            {/*   extra  sugar */ }
+ {/*-------------------------------------------------  */}
+
+             {/*   extra  food certication */ }
+                <div className="single-extra">
+                    <input type="checkbox" name="health_cerificate" id="health_cerificate" checked={health_cerificate} onChange={handleChange}/>
+
+                    <label htmlFor="extraSugar">Health Creticate</label>
+                </div>
+            </div>
+            
+            {/*   extra  food certication */ }
         </form>
     </section>
     );

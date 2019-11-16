@@ -12,7 +12,7 @@ export default function Home() {
     <>
         <Hero>
     
-    <Banner title = "Coconut Products Series" subtitle="fdas">
+    <Banner title = "Coconut Products Series" subtitle="100% Naturl from ">
 
     <Link to ="/products" className ="btn-primary">
         new Products

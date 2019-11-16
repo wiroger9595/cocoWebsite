@@ -18,8 +18,8 @@ const ProductContext = React.createContext();
         maxCalories: 0,
         minSize:0,
         maxSize:0,
-        certification: false, 
-        non_Sugre: false,
+        health_cerificate: false,
+        extraSugar: false,
 
    };
    
@@ -30,7 +30,6 @@ const ProductContext = React.createContext();
        let products = this.formatData(items);
        let featuredProducts = products.filter(product => product.featured === true);
        
-        let minCalories = Math.min(...products.map(item => item.calories));
         let maxCalories = Math.max(...products.map(item => item.calories));
 
         let maxSize = Math.max(...products.map(item => item.size));
@@ -99,8 +98,8 @@ const ProductContext = React.createContext();
             minCalories,
             minSize,
             maxSize,
-            certification,
-            non_Sugre
+            health_cerificate,
+            extraSugar
         } = this.state;
     
 // all the products
@@ -123,6 +122,19 @@ calories = parseInt(calories);
 //filter by calories
     tempProducts = tempProducts.filter(product => product.calories <= calories);
 
+//filter by size
+    tempProducts = tempProducts.filter(product => product.size >= minSize && product.size <= maxSize);
+
+
+// //filter by non sugar
+    if(extraSugar){
+        tempProducts = tempProducts.filter(product => product.extraSugar === true);
+    }
+
+// //filter by health cretication
+    if(health_cerificate){
+        tempProducts = tempProducts.filter(product => product.health_cerificate === true);
+    }
 /////////////////////////////////////////////////////////////
     //filter by capacity (filter form 1 to 5)
     // if(capacity !== 1){

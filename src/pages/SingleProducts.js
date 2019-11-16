@@ -47,8 +47,8 @@ static contextType = ProductContext;
                 container,
                 images,                
                 calories,
-                certification,
-                non_sugar
+                health_cerificate,
+                extraSugar
                 
 
             } = product;
