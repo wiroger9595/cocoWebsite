@@ -4,11 +4,11 @@ import Banner from "../components/Banner";
 import {Link} from 'react-router-dom';
 import ProductContainer from '../components/ProductContainer';
 
-const Products = () => {
+const About_Us = () => {
     return (
     <> 
-    <Hero hero ="productsHero">;
-    <Banner title = "Health Products Series">
+    <Hero hero ="productHero">;
+    <Banner title = "Getting Touch with us">
 
         <Link to ="/" className ="btn-primary">
             return products
@@ -20,4 +20,4 @@ const Products = () => {
     );
 }
 
-export default Products;
+export default About_Us;
