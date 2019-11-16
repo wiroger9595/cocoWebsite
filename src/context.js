@@ -10,8 +10,9 @@ const ProductContext = React.createContext();
         saveProducts: [],
         featuredProducts:[],
         loading:true,
-        type:'all',
-        capacity:1,
+        type:'All',
+        capacity:'All',
+        fruit_type: 'All',
         calories: 0,
         minCalories: 0,
         maxCalories: 0,
@@ -19,7 +20,6 @@ const ProductContext = React.createContext();
         maxSize:0,
         certification: false, 
         non_Sugre: false,
-
 
    };
    
@@ -43,7 +43,8 @@ const ProductContext = React.createContext();
            loading: false,
            calories: minCalories,
            maxCalories,
-           maxSize
+           maxSize,
+           
        });
     }
 
@@ -52,7 +53,7 @@ const ProductContext = React.createContext();
     formatData(items){
         let tempItems = items.map(item => {
 
-            let id = item.sys.id
+            let id = item.sys.id;
             let images = item.fields.images.map(image => image.fields.file.url);
 
             let product = {...item.fields, images , id}
@@ -70,17 +71,66 @@ const ProductContext = React.createContext();
         return product;
     }
 
+//---------------------------item type filter here ---------
     handleChange = event => {
-        const type = event.target.type;
-        const name = event.target.name;
-        const value = event.type === "checkbox";
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
 
+        console.log(target,name,value);
+        this.setState({
+            [name]:value
+        },this.filterProducts)
+
+        
     }
+
+//---------------------------item fruit type filter here ---------
+    
 
     filterProducts = ()=>{
-        console.log("come in");
+        let{
+            products, 
+            type, 
+            capacity,
+            fruit_type, 
+            calories, 
+            maxCalories, 
+            minCalories,
+            minSize,
+            maxSize,
+            certification,
+            non_Sugre
+        } = this.state;
+    
+// all the products
+    let tempProducts = [...products];
+
+// transform value
+//capacity = parseInt(capacity)
+
+//filter by type
+    if(type !== 'all'){
+        tempProducts = tempProducts.filter(product => product.type === type)
+    }
+//filter by fruit type
+    if(fruit_type !== 'all'){
+        tempProducts = tempProducts.filter(product => product.fruit_type === fruit_type)
     }
 
+
+/////////////////////////////////////////////////////////////
+    //filter by capacity (filter form 1 to 5)
+    // if(capacity !== 1){
+    //   tempProducts = tempProducts.filter(product => product.capacity >= capacity)
+    // }
+/////////////////////////////////////////////////////////////
+
+
+    this.setState({
+        saveProducts:tempProducts
+    })
+}
     render(){
     return (
         <ProductContext.Provider 
@@ -88,9 +138,12 @@ const ProductContext = React.createContext();
                     getProduct: this.getProduct,
                     handleChange: this.handleChange
             }}>
+
             {this.props.children}
         </ProductContext.Provider>
             
+
+        
     );
     }
 }
@@ -101,8 +154,12 @@ export function withProductConsumer(Component){
     return function ConsumerWrapper(props){
         return <ProductConsumer>
             {value => <Component {...props} context = {value}/>}
+            
         </ProductConsumer>
     }
 }
 
 export {ProductProvider, ProductConsumer, ProductContext};
+
+
+//////////////////////////////////

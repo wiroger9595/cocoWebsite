@@ -8,7 +8,7 @@ const Products = () => {
     return (
     <> 
     <Hero hero ="productHero">;
-    <Banner title = "Coconut Products Series">
+    <Banner title = "Health Products Series">
 
         <Link to ="/" className ="btn-primary">
             return products

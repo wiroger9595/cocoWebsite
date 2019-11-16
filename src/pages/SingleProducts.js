@@ -41,6 +41,7 @@ static contextType = ProductContext;
                 name,                   
                 description,
                 capacity,
+                fruit_type,
                 size,
                 extras,
                 container,
@@ -78,11 +79,11 @@ static contextType = ProductContext;
                     <article className ="info">
                         <h3>info</h3>
                         <h6>size : ${size} </h6>
-                        <h6>
+                        {/* <h6>
                             max capacity:{" "}
                             {capacity > 1 ? `${capacity} people` : `${capacity} person`
                             }
-                        </h6>
+                        </h6> */}
                         <h6>{container}</h6>
                     </article>
                 </div>
