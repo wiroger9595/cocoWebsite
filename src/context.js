@@ -41,7 +41,7 @@ const ProductContext = React.createContext();
            featuredProducts, 
            saveProducts: products,
            loading: false,
-           calories: minCalories,
+           calories: maxCalories,
            maxCalories,
            maxSize,
            
@@ -108,16 +108,20 @@ const ProductContext = React.createContext();
 
 // transform value
 //capacity = parseInt(capacity)
+calories = parseInt(calories);
+
 
 //filter by type
-    if(type !== 'all'){
+    if(type !== 'All'){
         tempProducts = tempProducts.filter(product => product.type === type)
     }
 //filter by fruit type
-    if(fruit_type !== 'all'){
+    if(fruit_type !== 'All'){
         tempProducts = tempProducts.filter(product => product.fruit_type === fruit_type)
     }
 
+//filter by calories
+    tempProducts = tempProducts.filter(product => product.calories <= calories);
 
 /////////////////////////////////////////////////////////////
     //filter by capacity (filter form 1 to 5)

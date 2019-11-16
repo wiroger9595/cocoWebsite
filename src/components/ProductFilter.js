@@ -31,10 +31,11 @@ export default function ProudctFilter({products}) {
     let fruit_types = getUnique(products, "fruit_type");
 
     //add all
-    types = ["all", ...types];
+    //add all
+    types = ["All", ...types];
 
     //add all fruit
-    fruit_types = ['all', ...fruit_types];
+    fruit_types = ['All', ...fruit_types];
 
     //item mapping code here
     types = types.map((item, index) => {
@@ -102,13 +103,13 @@ export default function ProudctFilter({products}) {
  {/*-------------------------------------------------  */}
 
             {/*select calories */ }
-            {/* <div className="form-group">
+            <div className="form-group">
                 <label htmlFor="calories">
                     Product's calories ${calories}
                 </label>
                 <input type="range" name ="calories" min={minCalories} max={maxCalories} id="calories" value={calories} onChange={handleChange} className="form-control" />
                 
-            </div> */}
+            </div>
 
             {/*select calories */ }
 
