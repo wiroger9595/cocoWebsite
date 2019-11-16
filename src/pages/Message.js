@@ -5,13 +5,14 @@ import {Link} from 'react-router-dom';
 import ProductContainer from '../components/ProductContainer';
 
 const Message = () => {
+    
     return (
     <> 
     <Hero hero ="productHero">;
     <Banner title = "Getting Touch with us">
 
         <Link to ="/" className ="btn-primary">
-            return products
+            return messages
         </Link>
     </Banner>
     </Hero>

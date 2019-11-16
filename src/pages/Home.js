@@ -13,9 +13,15 @@ export default function Home() {
         <Hero>
     
     <Banner title = "Coconut Products Series" subtitle="100% Naturl from ">
-
+    
+    <Link to ="/about" className ="btn-primary">
+        new About us
+    </Link>
     <Link to ="/products" className ="btn-primary">
         new Products
+    </Link>
+    <Link to ="/message" className ="btn-primary">
+        new Message
     </Link>
     </Banner>
 

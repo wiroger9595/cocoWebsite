@@ -11,7 +11,7 @@ const About_Us = () => {
     <Banner title = "Getting Touch with us">
 
         <Link to ="/" className ="btn-primary">
-            return products
+            return about us
         </Link>
     </Banner>
     </Hero>
