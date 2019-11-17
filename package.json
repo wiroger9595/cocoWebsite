@@ -2,7 +2,7 @@
   "name": "resort",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://wiroger9595.github.io/cocoWebsite/",
+  "homepage": "https://wiroger9595.com/cocoWebsite/",
   "dependencies": {
     "@sendgrid/mail": "^6.4.0",
     "body-parser": "^1.19.0",
