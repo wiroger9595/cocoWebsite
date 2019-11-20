@@ -1,19 +1,19 @@
-import product1 from "./images/details-1.jpeg";
-import product2 from "./images/details-2.jpeg";
-import product3 from "./images/details-3.jpeg";
-import product4 from "./images/details-4.jpeg";
-import img1 from "./images/product-1.jpeg";
-import img2 from "./images/product-2.jpeg";
-import img3 from "./images/product-3.jpeg";
-import img4 from "./images/product-4.jpeg";
-import img5 from "./images/product-5.jpeg";
-import img6 from "./images/product-6.jpeg";
-import img7 from "./images/product-7.jpeg";
-import img8 from "./images/product-8.jpeg";
-import img9 from "./images/product-9.jpeg";
-import img10 from "./images/product-10.jpeg";
-import img11 from "./images/product-11.jpeg";
-import img12 from "./images/product-12.jpeg";
+import product1 from "./images/a_160115_04409.jpeg";
+import product2 from "./images/a_181123_00892.jpeg";
+import product3 from "./images/a_140711_04872.jpg";
+import product4 from "./images/p_160115_04380.jpeg";
+import img1 from "./images/p_191114_00156.jpg";
+import img2 from "./images/p_191111_09774.jpg";
+import img3 from "./images/p_191111_09476.jpeg";
+import img4 from "./images/p_191114_00172.jpeg";
+import img5 from "./images/p_180423_00981.jpg";
+import img6 from "./images/p_150116_08010.jpg";
+import img7 from "./images/p_191111_09601.jpg";
+import img8 from "./images/p_191113_00132.jpeg";
+import img9 from "./images/p_191111_09762.jpg";
+import img10 from "./images/p_191111_09655.jpg";
+import img11 from "./images/p_191111_09696.jpg";
+import img12 from "./images/p_191111_09715.jpg";
 
 
 
@@ -760,7 +760,7 @@ export default [
       images: [{
           fields: {
             file: {
-              url: product1
+              url: img11
             }
           }
         },

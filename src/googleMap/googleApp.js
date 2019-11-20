@@ -32,7 +32,7 @@ import {
   
     return (
       <GoogleMap
-        defaultZoom={10}
+        defaultZoom={15}
         defaultCenter={{ lat: 25.065216, lng: 121.578301 }}
         defaultOptions={{ styles: mapStyles }}
       >
@@ -77,7 +77,7 @@ import {
   
   export default function App() {
     return (
-      <div style={{ width: "100vw", height: "50vh" }}>
+      <div style={{ width: "100vw", height: "100vh" }}>
         <MapWrapped
           googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyCviCi__cvRWfO6h3w4iPNVSrmAQkIHCAE
             `}

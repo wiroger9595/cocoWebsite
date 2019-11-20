@@ -7,6 +7,7 @@ import FeatureProducts from '../components/FeaturedProducts';
 import Button from '../components/Hero';
 import GoogleApp from '../googleMap/googleApp';
 import ContactInfo from '../components/ContactInfo';
+import GoogleLocation from '../components/GoogleMap'
 
 export default function Home() {
 
@@ -31,9 +32,8 @@ export default function Home() {
     <Services />
     <FeatureProducts />
     <Button>Contact Information</Button>
-    <GoogleApp>
-        <ContactInfo />
-    </GoogleApp>
+    <ContactInfo />
+    <GoogleLocation />
     </>
     
     );
