@@ -5,35 +5,35 @@ import {Link} from 'react-router-dom';
 import Services from "../components/Services";
 import FeatureProducts from '../components/FeaturedProducts';
 import Button from '../components/Hero';
-import GoogleApp from '../googleMap/googleApp';
+import Footer from '../components/Footer';
 import ContactInfo from '../components/ContactInfo';
-import GoogleLocation from '../components/GoogleMap'
+import ProductContainer from '../components/ProductContainer';
+import GoogleLocation from '../components/GoogleMap';
+import Videobackground from '../components/Videobackground';
+import Navbartop from '../components/Navbartop';
 
 export default function Home() {
 
     return (
-    <>
-        <Hero>
+    <> 
+    <Navbartop />
+    <Videobackground >
     
     <Banner title = "Coconut Products Series" subtitle="100% Naturl from ">
-    
-    {/* <Link to ="/about" className ="btn-primary">
-        new About us
-    </Link>
-    <Link to ="/products" className ="btn-primary">
-        new Products
-    </Link>
-    <Link to ="/message" className ="btn-primary">
-        new Message
-    </Link> */}
+
     </Banner>
 
-            </Hero>
+   
+    </Videobackground >
+
+    
     <Services />
+    <ProductContainer />
     <FeatureProducts />
-    <Button>Contact Information</Button>
-    <ContactInfo />
     <GoogleLocation />
+
+    <Button>Contact Information</Button>
+    <Footer />
     </>
     
     );
